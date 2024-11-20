@@ -8,22 +8,33 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Support\Facades\Log;
+
 
 class AuthController extends Controller
 {
     public function register(Request $request)
     {
+
+        // dd($request);
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'phone' => 'required',
+            'address' => 'required',
+            'email' => 'required',
+            'password' => 'required',
         ]);
 
         $user = User::create([
             'name' => $validatedData['name'],
             'email' => $validatedData['email'],
+            'phone' => $validatedData['phone'],
+            'address' => $validatedData['address'],
             'password' => Hash::make($validatedData['password']),
         ]);
+
+        Log::info('Regis successful', [$request->all()]);  
+
 
         $token = JWTAuth::fromUser($user);
 
@@ -33,11 +44,13 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-    
-        if (!$token = auth()->attempt($credentials)) {
+
+        if (!$token = Auth::attempt($credentials)) {
+            Log::warning('Login failed', ['email' => $request->email]);  
             return response()->json(['error' => 'Unauthorized'], 401);
         }
-    
+
+        Log::info('Login successful', ['email' => $request->email]);  
         return $this->respondWithToken($token);
     }
     
@@ -55,7 +68,7 @@ class AuthController extends Controller
     public function logout()
     {
         auth()->logout();
-
+        Log::info('User logged out'); 
         return response()->json(['message' => 'Successfully logged out']);
     }
 }
