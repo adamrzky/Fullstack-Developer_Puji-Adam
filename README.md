@@ -48,14 +48,15 @@ Proyek ini adalah implementasi RESTful API yang dikembangkan menggunakan pendeka
 ----
 # Implementasi Test Mobile (Flutter)
 
-![Screenshoot](mobile/ss1.jpg "Home")
-![Screenshoot](mobile/ss2.jpg "Add")
-![Screenshoot](mobile/ss3.jpg "Edit")
+<!-- ![Screenshoot](mobile/ss1.jpg "Home")
+![Screenshoot](mobile/ss2.jpg "Add") -->
 
 ### Fitur Dasar (CRUD)
 - **Tambah Tugas (Add Task):** Pengguna dapat menambahkan tugas baru ke dalam daftar.
 - **Edit Tugas (Edit Task):** Tugas yang ada dapat diubah sesuai kebutuhan pengguna.
 - **Hapus Tugas (Delete Task):** Tugas yang tidak lagi relevan dapat dihapus dari daftar.
+
+![Screenshoot](mobile/ss3.jpg "Edit")
 
 
 
