@@ -1,10 +1,8 @@
 -----------------------------------------------
 
-# RESTful API - Backend 1
+# Implementasi Test Backend 1 (Laravel)
 
 Proyek ini adalah implementasi RESTful API yang dikembangkan menggunakan pendekatan arsitektur MVC. API ini mendukung fitur CRUD dasar, autentikasi, dan logging untuk mencatat aktivitas penting, termasuk login, registrasi, dan operasi CRUD.
-
-## Fitur Utama
 
 ### CRUD Operations
 - **Create**: Menambahkan data baru ke database.
@@ -23,9 +21,11 @@ Proyek ini adalah implementasi RESTful API yang dikembangkan menggunakan pendeka
   - Error yang terjadi selama proses request.
 - Log disimpan di file `storage/logs/laravel.log` atau direktori yang sesuai dengan konfigurasi logging.
 
+### Design Pattern: MVC (Model-View-Controller)
+
 -----------------------------------------------
 
-# Implementasi Test Frontend 
+# Implementasi Test Frontend (ReactJs)
 
 
 
@@ -39,11 +39,12 @@ Proyek ini adalah implementasi RESTful API yang dikembangkan menggunakan pendeka
 - **Animasi:** Animasi diterapkan pada tugas saat ditambahkan, dihapus, atau diedit.
 - **Pencarian Tugas (Search Bar):** Pengguna dapat mencari tugas spesifik menggunakan kata kunci di search bar.
 - **Integrasi API Publik:** Berhasil Menambah Quote Of The Day dari api public
+- **Design Pattern:** Component-based architecture dan state management untuk mengelola data aplikasi.
 - **Pengujian Unit (Unit Testing)** 
 
 
 ----
-# Implementasi Test Mobile 
+# Implementasi Test Mobile (Flutter)
 
 
 
