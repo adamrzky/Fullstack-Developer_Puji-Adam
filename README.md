@@ -27,6 +27,8 @@ Proyek ini adalah implementasi RESTful API yang dikembangkan menggunakan pendeka
 
 # Implementasi Test Frontend (ReactJs)
 
+![Screenshoot](frontend-1/image.png "Home")
+
 
 
 ### Fitur Dasar (CRUD)
@@ -46,7 +48,9 @@ Proyek ini adalah implementasi RESTful API yang dikembangkan menggunakan pendeka
 ----
 # Implementasi Test Mobile (Flutter)
 
-
+![Screenshoot](mobile/ss1.png "Home")
+![Screenshoot](mobile/ss2.png "Add")
+![Screenshoot](mobile/ss3.png "Edit")
 
 ### Fitur Dasar (CRUD)
 - **Tambah Tugas (Add Task):** Pengguna dapat menambahkan tugas baru ke dalam daftar.
